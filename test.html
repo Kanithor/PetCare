@@ -8,9 +8,68 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
 	<style type="text/css">
+
+		body {
+			margin: 0;
+			font-family: Arial;
+		}
+
+		.header {
+		  overflow: hidden;
+		  background-color: #99ffcc;
+		  padding: 20px 10px;
+		}
+
+		.header a {
+		  float: left;
+		  color: black;
+		  text-align: center;
+		  padding: 12px;
+		  text-decoration: none;
+		  font-size: 18px;
+		  line-height: 25px;
+		  border-radius: 4px;
+		}
+
+		.header a.logo {
+		  font-size: 25px;
+		  font-weight: bold;
+		}
+
+		.header a:hover {
+		  background-color: #ddd;
+		  color: black;
+		}
+
+		.header a.active {
+		  background-color: dodgerblue;
+		  color: white;
+		}
+
+		.header-right {
+		  float: right;
+		}
+
+		@media screen and (max-width: 500px) {
+		  .header a {
+		    float: none;
+		    display: block;
+		    text-align: left;
+		  }
+		  .header-right {
+		    float: none;
+		  }
+		}
+
+		h3 {
+		  text-align:center;
+		  margin-top: 40px;
+		}
+
 		.borde{
-			background-color: gray;
-			height: 200px;
+			background-color: #a3c2c2;
+			padding: inherit;
+			text-align: center;
 		}
 		.borde1{
 			background-color: aquamarine;
@@ -27,94 +86,64 @@
 			height: 50px;
 			text-align: center;
 		}
+
+		.center {
+	    display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	    width: 50%;
+		}
+
+		hr {
+		  height: 3px;
+		  background-color: black;
+		}
+		.center-block {
+  		float:none;
+		}
 	</style>
 
 
 </head>
 
 
-<body>
+<body style="background-color: #99ffcc">
 <!-- Empieza el contenido -->
 
 <div class="container">
 
-
-	<div class="row">
-		<div class="col">
-			<h3>CABECERA</h3>
-			<p>LASKdkasjd fkjsan fja nfa sfkj qowf  asf ok fj as flka ck  clka slk aks f jvas k falk dkc askd lkas dk alks lkas kdmas d as kas kc sc aks foka sk kas lkdmaslk cka vje voj aslm ckamwok lkds vjsnd ojv anloslkañacmlkas nc c als lc alksc lka calskc lak cke km aclk </p>
-		</div>
-	</div>
-
-
-
-	<div class="row">
-		
-		<div class="col-xs-12	col-sm-12	col-md-4	col-lg-2	col-xl-6	d-none	d-md-block	borde1"> 
-			<p>Uno</p>
-		</div>	
-
-		<div class="col-xs-12	col-sm-12	col-md-4	col-lg-8	col-xl-3	d-xs-none 	borde2"> 
-			<p>Dos</p>
-		</div>
-
-		<div class="col-xs-12	col-sm-12	col-md-4	col-lg-2	col-xl-3	d-none	d-md-block 	borde3"> 
-			<p>Tres</p>
-		</div>
-
-	</div>
-	
-
-	<div class="row">
-		<div class="col">
-			<h3>PIE DE PAGINA</h3>
-			<p>LASKdkasjd fkjsan fja nfa sfkj qowf  asf ok fj as flka ck  clka slk aks f jvas k falk dkc askd lkas dk alks lkas kdmas d as kas kc sc aks foka sk kas lkdmaslk cka vje voj aslm ckamwok lkds vjsnd ojv anloslkañacmlkas nc c als lc alksc lka calskc lak cke km aclk </p>
-		</div>
-	</div>
-
-
-	<div class="row">
-		
-		<div class="col-12	col-sm-6	col-md-4	col-lg-2	col-xl-6	 	border"> 
-			<p>Cuatro</p>
-		</div>	
-
-		<div class="col-12	col-sm-6	col-md-4	col-lg-8	col-xl-3 	borde2"> 
-			<p>Cinco</p>
-			<span class="float-left">IZQUIERDA</span>
-			<span class="float-right">DERECHA</span>
-			<span class="float-up">ARRIBA</span>
-			<span class="float-bottom">ABAJO </span>
-			
-		</div>
-
-		<div class="col-12	col-sm-12	col-md-4	col-lg-2	col-xl-3 	border"> 
-			<p>Seis</p>
-		</div>
-
-	</div>
-
-
-
+	<div class="header">
+  <a href="#default" class="logo">PetCare</a>
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="#contact">Contacto</a>
+    <a href="#about">Sobre Nosotros</a>
+  </div>
 </div>
 
+	<hr>
+
+	<div class="row">
 
 
+		<div class="col-12">
+			<div class="header center">
+				<a class="logo"	href="#alimentar">Alimentar</a>
+			</div>
+		</div>
 
+		<div class="col-12">
+			<div class="header	center">
+				<a class="logo"	href="#interactuar">Interactuar</a>
+			</div>
+		</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+		<div class="col-12">
+			<div class="header	center">
+				<a class="logo"	href="#seguimiento">Seguimiento</a>
+			</div>
+		</div>
+	</div>
 
 
 
