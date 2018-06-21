@@ -8,6 +8,7 @@ def index():
 @app.route('/users/login')
 def login():
     return render_template('users/login.html')
+<<<<<<< HEAD
 
 @app.route('/feed')
 def feed():
@@ -16,3 +17,6 @@ def feed():
 @app.route('/about')
 def about():
     return render_template('layouts/about.html')
+=======
+    
+>>>>>>> 6a5602cd93be6960eb12b017ec805a71103f270c
