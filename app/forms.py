@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, IntegerField, Form, validators
 from wtforms.validators import DataRequired
@@ -21,3 +22,14 @@ class RegistrationForm(Form):
     ])
     confirm = PasswordField('Repeat Password')
     accept_tos = BooleanField('I accept the TOS', [validators.DataRequired()])
+=======
+from wtforms import Form
+from wtforms import StringField, IntegerField, validators
+
+class NewPet(Form):
+    name = StringField('Nombre')
+    race = StringField('Raza')
+    size = StringField('Tamaño')
+    colour = StringField('Color')
+
+>>>>>>> 2a7ff4b1c703d4905ad846630aeab3621467d0fa
