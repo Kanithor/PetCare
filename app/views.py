@@ -12,6 +12,10 @@ cur = conn.cursor()
 def index():
 	return render_template("index.html")
 
+@app.route('/interact')
+def interat():
+    return render_template("interact.html")
+
 
 @app.route('/feed')
 def feed():
@@ -38,3 +42,25 @@ def register():
         flash('Thanks for registering')
         return redirect(url_for('login'))
     return render_template('register.html', form=form)
+
+@app.route('/petregister', methods=['GET', 'POST'])
+def petregister():
+    form = NewPet(request.form)
+    if request.method == 'POST' and form.validate():
+        pet = User(form.name.data, form.race.data,
+                    form.size.data, form.colour.data)
+        db_session.add(pet)
+        flash('Thanks for registering')
+        return redirect(url_for('login'))
+    return render_template('petregister.html', form=form)
+
+
+@app.route('/logs', methods=['GET', 'POST'])
+def logs():
+	historial =  request.form['historial']
+        sql ="""select id,cantidad,tipo,fecha from historial"""
+        print sql
+        cur.execute(sql)
+        logs  = cur.fetchall()
+
+        return render_template("logs.html",logs = logs) 

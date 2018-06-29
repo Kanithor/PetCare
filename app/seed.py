@@ -24,6 +24,18 @@ sql ="""insert INTO usuarios (id, nombre, apellido, email, passwd, telefono, cre
 
 cur.execute(sql)
 
+sql ="""insert INTO historial (id, cantidad, tipo, fecha)
+ values ('0',50,'alimentacion',now() );
+"""
+
+cur.execute(sql)
+
+
+sql ="""insert INTO historial (id, cantidad, tipo, fecha)
+ values ('0',150,'relleno',now() );
+"""
+
+cur.execute(sql)
 
 
 conn.commit()

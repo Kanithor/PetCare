@@ -25,7 +25,7 @@ cur.execute(sql)
 
 sql ="""
 CREATE TABLE historial 
-           (id PRIMARY KEY, cantidad integer, fecha timestamp);
+           (id PRIMARY KEY, cantidad integer, tipo varchar, fecha timestamp);
 """
 
 conn.commit()

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+
+    <div class="row">
+
+        <!-- Blog Post Content Column -->
+        <div class="col-lg-8">
+
+                {% for log in logs %}
+                <tr>
+                    <td>{{log[0]}}</td>
+                    <td>{{log[1]}}</td>
+                    ...
+                </tr>
+                {% endfor %}
+
+        </div>
+
+</div>
+{% endblock %}

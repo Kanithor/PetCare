@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% from "_formhelpers.html" import render_field %}
+<div class="col-md-8">
+        <form method=post>
+        <dl>
+            {{ render_field(form.name) }}
+            {{ render_field(form.race) }}
+            {{ render_field(form.size) }}
+            {{ render_field(form.colour) }}
+        </dl>
+        <p><input type=submit value=Register>
+        </form>
+</div>
+{% endblock %}
